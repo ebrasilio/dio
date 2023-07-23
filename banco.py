@@ -10,9 +10,9 @@ l_saques = 3
 
 while True:
 
-    opt = input('\t [d] --> depósito\n\t [s] --> saque\n\t [e] --> extrato\n\t [q] --> sair \n')
+    opt = input('\t [1] --> depósito\n\t [2] --> saque\n\t [3] --> extrato\n\t [0] --> sair \n')
     
-    if opt == 'd':
+    if opt == '1':
         valor = float(input('Depósito --> informa o valor: '))
         if valor > 0:
             saldo += valor
@@ -20,7 +20,7 @@ while True:
         else:
             print("Impossível depositar valor negativo!")
 
-    elif opt == 's':
+    elif opt == '2':
         valor = float(input('Saque --> informa o valor: '))
         if valor > saldo:
             print("Saldo Insuficiente saque não realizado")
@@ -35,7 +35,7 @@ while True:
         else:
             print("Saque não realizado, valor inválido")    
     
-    elif opt == 'e':
+    elif opt == '3':
         print("\tExtrato: ")
         if not extrato:
             print("Sem movimentações")
@@ -43,7 +43,7 @@ while True:
             print(extrato)
             print(f"Saldo: R${saldo:.2f}\n")
 
-    elif opt == 'q':
+    elif opt == '0':
         break
     else:
         print('Operação Inválida, selecione novamente a operação')
