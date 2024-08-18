@@ -10,7 +10,7 @@ module.exports = class openai{
 
     static textCompletion({prompt}){
         return{
-            model: "davinci-002",
+            model: "davinci-003",
             prompt: `${prompt}`,
             temperature: 0,
             max_tokens: 3500,
